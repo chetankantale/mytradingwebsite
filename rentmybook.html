@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent My Book</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-2xl font-bold text-blue-600">RentMyBook</h1>
+                    <div class="relative hidden md:block">
+                        <input type="search" placeholder="Search books..." class="pl-10 pr-4 py-2 border rounded-lg w-64">
+                        <i class="bi bi-search absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 hover:bg-gray-100 rounded-full">
+                        <i class="bi bi-cart text-xl"></i>
+                    </button>
+                    <button class="p-2 hover:bg-gray-100 rounded-full">
+                        <i class="bi bi-person-circle text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-20 pb-8">
+        <!-- Categories -->
+        <div class="flex overflow-x-auto py-4 hide-scrollbar">
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-full mr-2 whitespace-nowrap">All Books</button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full mr-2 whitespace-nowrap">Academic</button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full mr-2 whitespace-nowrap">Fiction</button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full mr-2 whitespace-nowrap">Non-Fiction</button>
+            <button class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full mr-2 whitespace-nowrap">Children</button>
+        </div>
+
+        <!-- Featured Section -->
+        <section class="my-8">
+            <h2 class="text-xl font-semibold mb-4">Featured Books</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Book Cards -->
+                <div class="book-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f" alt="Book cover" class="w-full h-48 object-cover rounded-md mb-3">
+                    <h3 class="font-semibold">The Great Gatsby</h3>
+                    <p class="text-sm text-gray-600">F. Scott Fitzgerald</p>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-blue-600 font-bold">$5/week</span>
+                        <button class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Rent Now</button>
+                    </div>
+                </div>
+
+                <div class="book-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73" alt="Book cover" class="w-full h-48 object-cover rounded-md mb-3">
+                    <h3 class="font-semibold">To Kill a Mockingbird</h3>
+                    <p class="text-sm text-gray-600">Harper Lee</p>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-blue-600 font-bold">$4/week</span>
+                        <button class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Rent Now</button>
+                    </div>
+                </div>
+
+                <div class="book-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19" alt="Book cover" class="w-full h-48 object-cover rounded-md mb-3">
+                    <h3 class="font-semibold">1984</h3>
+                    <p class="text-sm text-gray-600">George Orwell</p>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-blue-600 font-bold">$6/week</span>
+                        <button class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Rent Now</button>
+                    </div>
+                </div>
+
+                <div class="book-card bg-white p-4 rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e" alt="Book cover" class="w-full h-48 object-cover rounded-md mb-3">
+                    <h3 class="font-semibold">Pride and Prejudice</h3>
+                    <p class="text-sm text-gray-600">Jane Austen</p>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-blue-600 font-bold">$4/week</span>
+                        <button class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section class="my-8">
+            <h2 class="text-xl font-semibold mb-4">New Arrivals</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Similar book cards structure -->
+                <div class="book-card bg-white p-4 rounded-lg shadow-md">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e" alt="Book cover" class="w-full h-48 object-cover rounded-md mb-3">
+                        <span class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs">New</span>
+                    </div>
+                    <h3 class="font-semibold">The Catcher in the Rye</h3>
+                    <p class="text-sm text-gray-600">J.D. Salinger</p>
+                    <div class="flex items-center justify-between mt-2">
+                        <span class="text-blue-600 font-bold">$5/week</span>
+                        <button class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Rent Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation for Mobile -->
+    <nav class="fixed bottom-0 w-full bg-white border-t md:hidden">
+        <div class="flex justify-around py-3">
+            <button class="text-center">
+                <i class="bi bi-house text-xl"></i>
+                <p class="text-xs">Home</p>
+            </button>
+            <button class="text-center">
+                <i class="bi bi-search text-xl"></i>
+                <p class="text-xs">Search</p>
+            </button>
+            <button class="text-center">
+                <i class="bi bi-cart text-xl"></i>
+                <p class="text-xs">Cart</p>
+            </button>
+            <button class="text-center">
+                <i class="bi bi-person text-xl"></i>
+                <p class="text-xs">Profile</p>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        // Add to cart functionality
+        document.querySelectorAll('button').forEach(button => {
+            if(button.textContent === 'Rent Now') {
+                button.addEventListener('click', function() {
+                    alert('Book added to cart!');
+                });
+            }
+        });
+
+        // Category filter functionality
+        document.querySelectorAll('.categories button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.categories button').forEach(btn => {
+                    btn.classList.remove('bg-blue-600', 'text-white');
+                    btn.classList.add('bg-gray-200');
+                });
+                // Add active class to clicked button
+                this.classList.remove('bg-gray-200');
+                this.classList.add('bg-blue-600', 'text-white');
+            });
+        });
+    </script>
+</body>
+</html>
