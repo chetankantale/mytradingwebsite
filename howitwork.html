@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithmic Trading - Learn & Explore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-['Inter']">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="bi bi-graph-up-arrow text-2xl text-blue-600"></i>
+                    <span class="ml-2 font-semibold text-xl">AlgoTrading Hub</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#overview" class="text-gray-700 hover:text-blue-600">Overview</a>
+                    <a href="#learn" class="text-gray-700 hover:text-blue-600">Learn</a>
+                    <a href="#resources" class="text-gray-700 hover:text-blue-600">Resources</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold mb-4">Discover Algorithmic Trading</h1>
+                <p class="text-xl">Learn how computers can make trading decisions using mathematical models</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8">What is Algorithmic Trading?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="bi bi-cpu text-2xl text-blue-600"></i>
+                        <h3 class="text-xl font-semibold ml-2">Automated Trading</h3>
+                    </div>
+                    <p>Algorithmic trading uses computer programs and complex mathematical models to execute large orders and generate profits at a speed impossible for human traders.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="bi bi-lightning text-2xl text-blue-600"></i>
+                        <h3 class="text-xl font-semibold ml-2">High Frequency</h3>
+                    </div>
+                    <p>Algorithms can analyze multiple markets and execute trades based on market conditions in milliseconds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Resources -->
+    <section id="resources" class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8">Learn From Experts</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-48" src="https://www.youtube.com/embed/watch?v=Vn940KtuGF4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Introduction to Algo Trading</h3>
+                        <p class="text-gray-600">Learn the basics of algorithmic trading and how it works.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-48" src="https://www.youtube.com/embed/watch?v=uU0HrWl9qwQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Strategy Development</h3>
+                        <p class="text-gray-600">Deep dive into creating algorithmic trading strategies.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="w-full h-48" src="https://www.youtube.com/embed/watch?v=xfzGZB4HhEE" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Risk Management</h3>
+                        <p class="text-gray-600">Understanding risk management in algo trading.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Diagram -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8">How It Works</h2>
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <div class="flex flex-wrap justify-around items-center" id="algoFlow">
+                    <!-- Interactive flow diagram will be drawn here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Create interactive flow diagram
+        const flowDiagram = document.getElementById('algoFlow');
+        const steps = [
+            { icon: 'bi-data', text: 'Market Data Input' },
+            { icon: 'bi-gear', text: 'Algorithm Processing' },
+            { icon: 'bi-graph-up', text: 'Signal Generation' },
+            { icon: 'bi-currency-exchange', text: 'Trade Execution' }
+        ];
+
+        steps.forEach((step, index) => {
+            const stepElement = document.createElement('div');
+            stepElement.className = 'flex flex-col items-center m-4 text-center transition-all duration-300 hover:transform hover:scale-110';
+            stepElement.innerHTML = `
+                <i class="bi ${step.icon} text-4xl text-blue-600 mb-2"></i>
+                <p class="font-semibold">${step.text}</p>
+                ${index < steps.length - 1 ? '<i class="bi bi-arrow-right text-2xl text-gray-400 ml-4"></i>' : ''}
+            `;
+            flowDiagram.appendChild(stepElement);
+        });
+    </script>
+</body>
+</html>
